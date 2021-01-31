@@ -301,6 +301,9 @@ li {
   }
 }
 @media only screen and (max-width: 350px) {
+  body{
+    background: red;
+  }
   .container {
     width: 100%;
   }

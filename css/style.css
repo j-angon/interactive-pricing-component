@@ -21,8 +21,9 @@ body {
   line-height: 1.5;
   height: 100vh;
   width: 100vw;
-  background: url(../images/bg-pattern.svg) no-repeat center 0,
-    var(--main-bg-color);
+  background: red;
+/*   background: url(../images/bg-pattern.svg) no-repeat center 0,
+    var(--main-bg-color); */
   background-size: 100% 450px;
   font-size: 15px;
   overflow: hidden;
@@ -300,10 +301,10 @@ li {
     padding: 5px;
   }
 }
-@media only screen and (max-width: 350px) {
+/* @media only screen and (max-width: 350px) {
   body{
     background: red;
-  }
+  } */
   .container {
     width: 100%;
   }

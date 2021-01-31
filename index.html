@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- External Css Files -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="title">
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial.<span>No credit card required.</span></p>
+    </div>
+    <div class="container">
+      <div class="container-content">
+        <div class="price-container">
+          <div class="price-box">
+            <div class="pageview-box">
+              <p><span class="pageview-count">100K</span> Pageviews</p>
+            </div>
+            <div class="pricing-box">
+              <p class="price-value">$<span class="p-value">16</span>.00</p>
+              <p>/<span class="b-value">month</span></p>
+            </div>
+          </div>
+
+          <!-- This is for slider code -->
+          <div class="slider-container">
+            <input type="range" min="0" max="4" value="2" class="slider border-r-30">
+            <div class="slider-progress border-r-30">
+            </div>
+          </div>
+          <!-- End of Slider code -->
+
+          <div class="billing-box">
+            <p>Monthly Billing</p>
+            <div class="toggle-container">
+              <input type="checkbox" class=toggle-cb>
+              <div class="toggle-slide border-r-30"></div>
+            </div>
+            <p>Yearly Billing</p>
+            <p>25%</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <ul>
+          <li>Unlimited websites</li>
+          <li>100% data ownership</li>
+          <li>Email reports</li>
+        </ul>
+        <div class="start-btn border-r-30">Start my trial</div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/j-angon">j-angon</a>.
+    </div>
+  </div>
+
+
+  <script src="./js/myApps.js"></script>
+</body>
+
+</html>

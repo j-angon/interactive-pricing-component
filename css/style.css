@@ -1,0 +1,307 @@
+:root {
+  --primary-color: hsl(227, 35%, 25%);
+  --secondary-color: hsl(225, 20%, 60%);
+  --main-bg-color: hsl(230, 100%, 99%);
+  --pricing-comp-bg: hsl(0, 0%, 100%);
+  --empty-slider-bar: hsl(224, 65%, 95%);
+  --toggle-bg: hsl(223, 50%, 87%);
+  --discount-text: hsl(15, 100%, 70%);
+  --discount-bg: hsl(14, 92%, 95%);
+  --cta-text: hsl(226, 100%, 87%);
+  --slider-bar-bg: hsl(174, 77%, 80%);
+  --slider-circle-bg: hsl(174, 86%, 45%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.5;
+  height: 100vh;
+  width: 100vw;
+  background: url(../images/bg-pattern.svg) no-repeat center 0,
+    var(--main-bg-color);
+  background-size: 100% 450px;
+  font-size: 15px;
+  overflow: hidden;
+}
+p,
+li {
+  color: var(--secondary-color);
+}
+/* Global */
+.border-r-30 {
+  border-radius: 30px;
+}
+.round {
+  border-radius: 50%;
+}
+/* Start */
+.wrapper {
+  height: 100%;
+  width: 100%;
+}
+.title {
+  text-align: center;
+  padding: 40px;
+  margin: 50px 0;
+  background: url(../images/pattern-circles.svg) no-repeat center;
+}
+.title h1 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+.title p {
+  color: var(--secondary-color);
+}
+
+/* Content */
+.container {
+  width: 550px;
+  margin: auto;
+  background: var(--pricing-comp-bg);
+  border-radius: 15px;
+}
+.container-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--empty-slider-bar);
+}
+.price-container {
+  width: 85%;
+}
+.price-box {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  margin: 40px 0;
+}
+.pageview-box p {
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+.pricing-box {
+  display: flex;
+  justify-self: right;
+  align-items: center;
+}
+
+/* PRICE */
+.price-value {
+  color: var(--primary-color);
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-right: 5px;
+}
+.billing-type {
+  color: var(--secondary-color);
+}
+
+/* SLIDER */
+.slider-container {
+  width: 100%;
+  position: relative;
+  height: 11px;
+  z-index: 3;
+  margin-bottom: 20px;
+}
+.slider {
+  width: 100%;
+  -webkit-appearance: none;
+  background: var(--empty-slider-bar);
+  height: 11px;
+  outline: none;
+
+  position: relative;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  z-index: 3;
+  background: url(../images/icon-slider.svg) no-repeat center,
+    var(--slider-circle-bg);
+  border-radius: 50%;
+  position: relative;
+}
+.slider::-webkit-slider-thumb:hover {
+  opacity: 0.8;
+}
+.slider-progress {
+  width: 50%;
+  height: 11px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background: var(--slider-bar-bg);
+  z-index: 0;
+}
+
+/* Slider End */
+
+.billing-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 30px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+.billing-box > p {
+  margin: 6px;
+  font-weight: 600;
+}
+/* Giving background to discount text */
+.billing-box > p:last-child {
+  background: var(--discount-bg);
+  padding: 2px 5px;
+  border-radius: 20px;
+  color: var(--discount-text);
+}
+.billing-box > p:last-child::after {
+  content: " discount";
+}
+
+/* toogle */
+.toggle-container {
+  position: relative;
+  width: 50px;
+  height: 26px;
+}
+.toggle-container input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* body of toggle */
+.toggle-slide {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--empty-slider-bar);
+}
+.toggle-slide:hover {
+  background: var(--slider-bar-bg);
+}
+
+/* Circle on Toggle bar */
+.toggle-slide:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+
+/* Change background if checked */
+.toggle-container input:checked + .toggle-slide {
+  background: var(--slider-circle-bg);
+}
+/* Moving animation of toggle */
+.toggle-container input:checked + .toggle-slide::before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+/* Toggle End */
+
+/* Footer */
+
+.footer {
+  width: 85%;
+  margin: auto;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.footer ul {
+  flex: 1;
+  margin: 30px 0;
+}
+.footer li {
+  padding: 5px 0;
+  list-style-image: url(../images/icon-check.svg);
+}
+.start-btn {
+  padding: 12px;
+  width: 180px;
+  background: var(--primary-color);
+  text-align: center;
+  color: var(--cta-text);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-position: center -120px;
+  }
+  .title {
+    padding: 40px 10px;
+    margin: 25px 0;
+  }
+  .title h1 {
+    font-size: 1.3rem;
+  }
+  .title p {
+    font-size: 0.9rem;
+  }
+  .title span {
+    display: block;
+  }
+  .container {
+    width: 90%;
+  }
+  .price-container {
+    position: relative;
+  }
+  .price-box {
+    display: block;
+    text-align: center;
+  }
+  .pricing-box {
+    justify-content: center;
+    margin-top: 80px;
+  }
+  .slider-container {
+    position: absolute;
+    top: 91px;
+  }
+  .billing-box {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  .billing-box > p:last-child::after {
+    content: "";
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 20px 0 30px 0;
+  }
+  .footer ul {
+    margin: 0 0 30px 0;
+  }
+  .footer li {
+    list-style-position: inside;
+    padding: 5px;
+  }
+}
+@media only screen and (max-height: 700px) {
+  body {
+    overflow-y: auto;
+  }
+}
